@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<form-beans type="org.apache.struts.action.ActionFormBean">
+		<form-bean name="dashboardForm" type="com.sasi.form.DashboardForm" />
+		<form-bean name="loginForm" type="com.sasi.form.LoginForm" />
+</form-beans>
+
+<action-mappings type="org.apache.struts.action.ActionMapping">
+   <action path="/dashboard" name="dashboardForm" validate = "true" 
+         type="com.sasi.action.HeaderAction" attribute="dashboardForm">
+	</action>
+	
+	<action path="/login" name="loginForm" validate = "false" 
+         type="com.sasi.action.LoginAction" attribute="loginForm">
+	</action>
+	
+	<action path="/purchase" name="dashboardForm" validate = "false" 
+         type="com.sasi.action.HeaderAction" attribute="dashboardForm">
+	</action>
+	
+	<action path="/buses" name="dashboardForm" validate = "false" 
+         type="com.sasi.action.HeaderAction" attribute="dashboardForm">
+	</action>
+	
+	<action path="/book" name="dashboardForm" validate = "false" 
+         type="com.sasi.action.HeaderAction" attribute="dashboardForm">
+	</action>
+</action-mappings>
+
+</struts-config>
