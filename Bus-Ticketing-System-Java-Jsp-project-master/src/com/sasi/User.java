@@ -78,6 +78,7 @@ public class User {
 				this.email = result.getString("email");
 				this.phone = result.getString("phone");
 				this.rule = result.getString("rule");
+				this.address = result.getString("address");
 			}
 			
 		} catch (SQLException e) {
