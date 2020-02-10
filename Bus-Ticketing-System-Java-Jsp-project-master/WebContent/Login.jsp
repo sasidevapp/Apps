@@ -37,7 +37,7 @@
 						Login
 					</h3>
 					<div class="input-group">
-						<label>Mobile*</label>
+						<label>Mobile/Email</label>
 						<input type="text" name="phone" class="form-controller" id="phone">
 					</div>
 					<div class="input-group">
