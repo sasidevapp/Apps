@@ -15,7 +15,7 @@ INSERT INTO REDBUS_USERS (user_id, name, email, phone, address, password, rule) 
 (2, 'ADMIN', 'admin@gmail.com', '9192929292', 'chennai', '123', 'admin');
 
 CREATE TABLE BUSES (
-  BUS_ID number ,
+  BUS_ID number , 
   BUS_NO VARCHAR2(30) ,
   NAME VARCHAR2(50) ,
   TOTAL_SEAT number ,
