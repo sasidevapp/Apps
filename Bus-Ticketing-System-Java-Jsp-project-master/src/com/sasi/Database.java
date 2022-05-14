@@ -33,13 +33,16 @@ public class Database {
     private static ComboPooledDataSource createConnectionPool() {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         try {
-            dataSource.setDriverClass("oracle.jdbc.driver.OracleDriver");
-            dataSource.setJdbcUrl("jdbc:oracle:thin:@192.168.57.196:1521:orcl");
-            dataSource.setUser("CSPLATFORMDEV");
-            dataSource.setPassword("csplatformdev");
+        	dataSource.setDriverClass("org.postgresql.Driver");
+            dataSource.setJdbcUrl("jdbc:postgresql://ec2-52-4-104-184.compute-1.amazonaws.com:5432/ddshttahk9btj7?sslmode=require");
+            dataSource.setUser("tlznodimqwirfj");
+            dataSource.setPassword("82710d527913abe9d8e10657fe5a491bd2e076029d7abe3c1cb9ff9d924578f4");
             dataSource.setMaxPoolSize(5);
             dataSource.setMinPoolSize(1);
             dataSource.setInitialPoolSize(5);
+            dataSource.setMaxIdleTimeExcessConnections(300); // seconds
+            dataSource.setIdleConnectionTestPeriod(300); // seconds
+            dataSource.setMaxIdleTime(600); // seconds
             dataSource.setCheckoutTimeout(15000); // milliseconds
             dataSource.setAcquireIncrement(5);
             dataSource.setPreferredTestQuery("SELECT 1 FROM DUAL");
